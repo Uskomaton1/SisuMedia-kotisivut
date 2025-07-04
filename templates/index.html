@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <title>SisuMedia – Etusivu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="icon" href="{{ url_for('static', filename='logo.png') }}">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <canvas id="matrix"></canvas>
+
+  <header class="hero-section">
+    <div class="logo-row">
+      <img src="{{ url_for('static', filename='logo1.jpg') }}" class="logo">
+      <img src="{{ url_for('static', filename='SisuMedia-teksti.png') }}" class="sisutext">
+    </div>
+    <h1 class="main-title">Tekoälyllä päivitetty maalaisjärki</h1>
+    <p class="subtitle">Modernit ratkaisut. Inhimillinen ote. Suomalainen sisu.</p>
+    <nav class="icon-nav">
+      <a href="/"><i class="fas fa-home"></i><span>Etusivu</span></a>
+      <a href="/services"><i class="fas fa-cogs"></i><span>Palvelut</span></a>
+      <a href="/contact"><i class="fas fa-envelope"></i><span>Yhteystiedot</span></a>
+      <a href="/story"><i class="fas fa-star"></i><span>SisuMedia</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="content-block">
+      <h2>Selkeä ja luotettava kumppani</h2>
+<p>
+   Jokainen asiakas ja tilanne on erilainen, mutta yhtä tärkeä. 
+<p>Voit siis ottaa yhteyttä ilman suunnitelmaa tai osaamista. Kerrot vain mitä haluaisit saada aikaan, tai millainen ongelma pitäisi ratkaista</p>
+</p>
+<p><strong>Yhteydenotto ei sido mihinkään, eikä maksa mitään.</strong> Kysymällä selviää parhaiten, joten ota rohkeasti yhteyttä</p>
+    </section>
+  </main>
+
+  <footer>&copy; 2024 SisuMedia – Tekoälyllä päivitetty maalaisjärki.</footer>
+
+</body>
+</html>

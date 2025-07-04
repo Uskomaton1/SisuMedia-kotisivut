@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <title>Yhteystiedot – SisuMedia</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="icon" href="{{ url_for('static', filename='logo.png') }}">
+</head>
+<body>
+  <canvas id="matrix"></canvas>
+
+  <header class="hero-section">
+    <div class="logo-row">
+      <img src="{{ url_for('static', filename='logo1.jpg') }}" class="logo">
+      <img src="{{ url_for('static', filename='SisuMedia-teksti.png') }}" class="sisutext">
+    </div>
+    <h1 class="main-title">Yhteystiedot</h1>
+    <p class="subtitle">Ota rohkeasti yhteyttä ja kysy lisää!</p>
+    <nav class="icon-nav">
+      <a href="/"><i class="fas fa-home"></i><span>Etusivu</span></a>
+      <a href="/services"><i class="fas fa-cogs"></i><span>Palvelut</span></a>
+      <a href="/contact"><i class="fas fa-envelope"></i><span>Yhteystiedot</span></a>
+      <a href="/story"><i class="fas fa-star"></i><span>SisuMedia</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="content-block">
+      <h2>Ota yhteyttä</h2>
+      <p>📧 Sähköposti: <a href="mailto:sisumedia@pm.me">sisumedia@pm.me</a></p>
+      <p>📱 Puhelin: 0401442822</p>
+      <p>📍 Sijainti: Mikkeli, Suomi</p>
+    </section>
+  </main>
+
+  <footer>&copy; 2024 SisuMedia – Tekoälyllä päivitetty maalaisjärki.</footer>
+  <script src="{{ url_for('static', filename='sisu-bot.js') }}"></script>
+</body>
+</html>
