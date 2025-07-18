@@ -17,12 +17,15 @@
     </div>
     <h1 class="main-title">Yhteystiedot</h1>
     <p class="subtitle">Ota rohkeasti yhteyttä ja kysy lisää!</p>
-    <nav class="icon-nav">
-      <a href="/"><i class="fas fa-home"></i><span>Etusivu</span></a>
-      <a href="/services"><i class="fas fa-cogs"></i><span>Palvelut</span></a>
-      <a href="/contact"><i class="fas fa-envelope"></i><span>Yhteystiedot</span></a>
-      <a href="/story"><i class="fas fa-star"></i><span>SisuMedia</span></a>
-    </nav>
+    <div class="navbar-container">
+  <nav class="navbar">
+    <a href="{{ url_for('index') }}">Etusivu</a>
+    <a href="{{ url_for('services') }}">Palvelut</a>
+    <a href="{{ url_for('contact') }}">Yhteystiedot</a>
+    <a href="{{ url_for('story') }}">SisuMedia</a>
+  </nav>
+</div>
+
   </header>
 
   <main>

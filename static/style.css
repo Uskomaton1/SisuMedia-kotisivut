@@ -1,156 +1,138 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
-
+/* Yleisasetukset */
 body {
   margin: 0;
-  padding: 0;
-  font-family: 'Orbitron', sans-serif;
+  font-family: Arial, sans-serif;
   background-color: #000;
-  color: #e0ffe0;
-  line-height: 1.6;
-}
-
-#matrix {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  opacity: 0.2;
-}
-
-.hero-section {
+  color: #00ff00;
   text-align: center;
-  padding: 40px 20px;
+}
+
+/* Header ja logo */
+.main-header {
+  padding: 20px 0;
 }
 
 .logo-row {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   gap: 20px;
-  margin-bottom: 20px;
 }
 
 .logo {
-  width: 200px;
+  width: 140px;
 }
 
 .sisutext {
-  height: 100px;
-  max-width: 300px;
+  height: 85px;
+  max-width: 420px;
 }
 
-.main-title {
-  font-size: 2.5em;
-  color: #00ff88;
+/* Sticky navigointipalkin tausta */
+.navbar-container {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.95);
+  padding: 10px 0;
+  box-shadow: 0 2px 10px rgba(0, 255, 0, 0.2);
+  backdrop-filter: blur(4px);
 }
 
-.subtitle {
-  font-size: 1.3em;
-  color: #b2ffcc;
-}
-
-.icon-nav {
+/* Navigointipainikkeet */
+.navbar {
   display: flex;
   justify-content: center;
-  gap: 30px;
-  margin: 30px 0;
   flex-wrap: wrap;
+  gap: 10px;
 }
 
-.icon-nav a {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #111;
-  padding: 15px;
-  border-radius: 12px;
-  border: 2px solid #00ff88;
-  width: 120px;
-  transition: 0.3s ease;
-  color: #00ff88;
-  font-size: 1.6em;
+.navbar a {
+  padding: 10px 20px;
+  border: 2px solid #00ff00;
+  border-radius: 8px;
+  color: #00ff00;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: all 0.3s ease-in-out;
 }
 
-.icon-nav a i {
-  margin-bottom: 8px;
-}
-
-.icon-nav a span {
-  font-size: 0.75em;
-  color: #b2ffcc;
-}
-
-.icon-nav a:hover {
-  background-color: #00ff88;
+.navbar a:hover {
+  background-color: #00ff00;
   color: #000;
   transform: scale(1.05);
+  box-shadow: 0 0 10px #00ff00;
 }
 
-.icon-nav a:hover span {
-  color: #000;
+/* Hero-alue */
+.hero {
+  padding: 60px 20px;
 }
 
-.content-block {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 40px 20px;
-  background-color: #111;
-  border: 1px solid #00ff88;
-  border-radius: 12px;
-  box-shadow: 0 0 10px #00ff88;
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
 }
 
-.content-block h2 {
-  color: #00ff88;
-}
-
-.button-area {
-  text-align: center;
-  margin: 30px 0;
+.hero p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto 30px;
+  line-height: 1.6;
 }
 
 .cta-button {
-  background-color: #00ff88;
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #00ff00;
   color: #000;
-  padding: 15px 30px;
+  text-decoration: none;
   font-weight: bold;
-  font-size: 1em;
-  border: none;
-  border-radius: 25px;
-  transition: 0.3s ease;
+  border-radius: 6px;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .cta-button:hover {
-  background-color: #00ffaa;
-  transform: scale(1.05);
+  background-color: #33ff33;
 }
 
+/* Footer */
 footer {
   text-align: center;
-  padding: 20px;
-  font-size: 0.9em;
-  color: #666;
-  border-top: 1px solid #00ff88;
-  margin-top: 40px;
+  padding: 30px 0;
+  font-size: 0.9rem;
+  color: #888;
 }
 
+/* Mobiililaitteet */
 @media screen and (max-width: 600px) {
   .logo-row {
     flex-direction: column;
-    gap: 10px;
+    align-items: center;
   }
 
-  .icon-nav {
-    gap: 20px;
-    font-size: 1.2em;
+  .logo, .sisutext {
+    max-width: 80%;
+    height: auto;
   }
 
-  .icon-nav a {
-    width: 70px;
-    padding: 10px;
+  .navbar {
+    flex-direction: column;
+    align-items: center;
   }
 
-  .content-block {
-    padding: 20px;
+  .navbar a {
+    width: 80%;
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
   }
 }
